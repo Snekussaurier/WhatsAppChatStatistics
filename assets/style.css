@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .dash-header {
+    background-color: #111 !important;
+}
+
+.dark-mode .dash-content {
+    background-color: #333 !important;
+}
+
+.dark-mode .dash-control {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.dark-mode .dash-control:hover {
+    background-color: #444 !important;
+}
+
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-container {
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.graph {
+    margin: 15px;
+}

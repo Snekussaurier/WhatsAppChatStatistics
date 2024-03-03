@@ -1,0 +1,17 @@
+.app-header {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: thin lightgrey solid;
+    position: sticky;
+    background: rgba(251,251,253,0.5);
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+}
+
+.app-header .app-header--title {
+    font-size: 22px;
+    padding-left: 28px;
+}
