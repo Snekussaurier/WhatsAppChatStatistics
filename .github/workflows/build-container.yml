@@ -24,7 +24,7 @@ jobs:
         run: docker build -t ghcr.io/snekussaurier/whatsapp-chat-statistics:latest -t ghcr.io/snekussaurier/whatsapp-chat-statistics:${{ github.sha }} .
 
       - name: Push Docker image to GHCR
-        run: docker push ghcr.io/${{ github.repository }}:latest && docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
+        run: docker push ghcr.io/snekussaurier/whatsapp-chat-statistics:latest && docker push ghcr.io/snekussaurier/whatsapp-chat-statistics:${{ github.sha }}
 
       - name: Logout from GHCR
         run: docker logout ghcr.io
