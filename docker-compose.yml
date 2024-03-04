@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_DB: whatsapp_groupchat_data
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    restart: always
+    depends_on:
+      - postgres
+
+  whatsapp_chat_statistics:
+    image: whatsapp-chat-statistics:latest
+    container_name: whatsapp_chat_statistics_container
+    volumes:
+      - ./_chat.txt:/app/_chat.txt
+      - ./config.yaml:/app/config.yaml
+    ports:
+      - "8050:8050"
+    restart: always
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+  pgadmin_data:
