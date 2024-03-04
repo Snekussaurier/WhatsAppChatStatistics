@@ -1,5 +1,7 @@
 # WhatsApp Chat Statistics
 
+<img width="100%" alt="Screenshot 2024-03-04 at 19 54 16" style="border-radius: 15px;" src="https://github.com/Snekussaurier/WhatsAppChatStatistics/assets/68194327/08437255-2e4f-4707-bb12-e2467aa53d55">
+
 ## Overview
 
 This Python application is designed to analyze WhatsApp group chat data and provide various statistics. It includes functionalities to process chat data, extract information such as message counts, common words, emojis, and message distribution over time, and visualize the results using a web interface built with Dash and Plotly.
