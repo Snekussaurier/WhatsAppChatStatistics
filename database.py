@@ -1,10 +1,20 @@
 import psycopg2
 from psycopg2.extras import execute_batch
+import yaml
 
 
 def connect_to_db():
+    with open('config.yaml', 'r') as file:
+        config = yaml.safe_load(file)
+
+    # Extract database connection parameters
+    dbname = config['database']['dbname']
+    user = config['database']['user']
+    password = config['database']['password']
+    host = config['database']['host']
+
     return psycopg2.connect(
-        dbname="whatsapp_groupchat_data", user="postgres", password="postgres", host="localhost"
+        dbname=dbname, user=user, password=password, host=host
     )
 
 

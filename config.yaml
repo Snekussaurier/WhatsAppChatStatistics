@@ -1,0 +1,14 @@
+users:
+  - Alice
+  - Bob
+  - Charlie
+  - David
+  - Emily
+  - Frank
+  - Grace
+  - Harry
+database:
+  dbname: "whatsapp_groupchat_data"
+  user: "postgres"
+  password: "postgres"
+  host: "postgres"

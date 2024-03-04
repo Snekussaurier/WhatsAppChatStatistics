@@ -8,7 +8,7 @@ from dash_app import create_dash_app
 
 def main():
     chat_file_path = '_chat.txt'
-    valid_users_path = 'valid_users.yaml'
+    valid_users_path = 'config.yaml'
 
     valid_users = read_valid_users_from_yaml(valid_users_path)
     df = analyze_chat_data(chat_file_path, valid_users)
@@ -33,7 +33,7 @@ def main():
     print("Starting statistics dashboard! ^^")
 
     app = create_dash_app(total_emoji_counts, user_message_counts, messages_time_of_day, common_words)
-    app.run_server(debug=True)
+    app.run_server(host='0.0.0.0')
 
 
 if __name__ == "__main__":
