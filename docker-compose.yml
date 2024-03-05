@@ -29,7 +29,7 @@ services:
       - postgres
 
   whatsapp_chat_statistics:
-    image: whatsapp-chat-statistics:latest
+    image: ghcr.io/snekussaurier/whatsappchatstatistics:main
     container_name: whatsapp_chat_statistics_container
     volumes:
       - ./_chat.txt:/app/_chat.txt
